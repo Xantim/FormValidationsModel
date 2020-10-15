@@ -1,0 +1,35 @@
+﻿@model User 
+
+@{
+    ViewData["Title"] = "Form Validation";
+    
+    }
+   
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+</div>
+
+<body>
+    <form class="form-group" asp-action="Submit" asp-controller="Home" method="Post">
+        <label asp-for="Name"></label><br>
+        <span class="alert-danger" asp-validation-for="Name"></span>
+        <input asp-for="Name"><br>
+
+        <label asp-for="Location"></label>
+        <span class="alert-danger" asp-validation-for="Location"></span><br>
+        <input asp-for="Location"><br>
+
+        <label asp-for="Language"></label>
+        <span class="alert-danger" asp-validation-for="Language"></span><br>
+        <input asp-for="Language"><br>
+
+        <label asp-for="Comment"></label>
+        <span class="alert-danger" asp-validation-for="Comment"></span><br>
+        <input asp-for="Comment"><br>
+
+        <input type="submit" value="create user" class="btn btn-primary mt-2"> 
+
+
+    </form>
+</body>
